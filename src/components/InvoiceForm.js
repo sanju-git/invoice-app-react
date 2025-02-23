@@ -6,12 +6,13 @@ import { toast } from "react-toastify";
 
 const InvoiceForm = ({ formData, setFormData, setActiveSection }) => {
   const [errors, setErrors] = useState({});
+
   useEffect(() => {
     const savedData = localStorage.getItem("invoiceFormData");
     if (savedData) {
       setFormData(JSON.parse(savedData));
     }
-  }, []);
+  }, [setFormData]); // ✅ Fixed: Added `setFormData` to the dependency array.
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -66,7 +67,7 @@ const InvoiceForm = ({ formData, setFormData, setActiveSection }) => {
     if (validateForm()) {
       toast.success("Invoice Submitted");
 
-      setFormData({
+      const emptyFormData = {
         vendorName: "",
         purchaseOrderNumber: "",
         invoiceNumber: "",
@@ -82,8 +83,10 @@ const InvoiceForm = ({ formData, setFormData, setActiveSection }) => {
         location: "",
         expenseDescription: "",
         comments: "",
-      });
-      localStorage.setItem("invoiceFormData", JSON.stringify(formData));
+      };
+
+      setFormData(emptyFormData);
+      localStorage.setItem("invoiceFormData", JSON.stringify(emptyFormData)); // ✅ Fixed: Now correctly resetting localStorage.
       setErrors({});
       setActiveSection("vendor");
     } else {
