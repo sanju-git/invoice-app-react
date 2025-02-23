@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/invoice-app-react/static/css/main.00dca8da.css",
-    "main.js": "/invoice-app-react/static/js/main.215e0dbd.js",
+    "main.js": "/invoice-app-react/static/js/main.cc72220d.js",
     "static/js/239.ab77cb35.chunk.js": "/invoice-app-react/static/js/239.ab77cb35.chunk.js",
     "static/js/977.0de4337d.chunk.js": "/invoice-app-react/static/js/977.0de4337d.chunk.js",
     "static/js/732.baf7beb0.chunk.js": "/invoice-app-react/static/js/732.baf7beb0.chunk.js",
@@ -10,13 +10,13 @@
     "static/media/WdgNLLU10l.gif": "/invoice-app-react/static/media/WdgNLLU10l.37f10cdf2a3f8ad77a66.gif",
     "index.html": "/invoice-app-react/index.html",
     "main.00dca8da.css.map": "/invoice-app-react/static/css/main.00dca8da.css.map",
-    "main.215e0dbd.js.map": "/invoice-app-react/static/js/main.215e0dbd.js.map",
+    "main.cc72220d.js.map": "/invoice-app-react/static/js/main.cc72220d.js.map",
     "239.ab77cb35.chunk.js.map": "/invoice-app-react/static/js/239.ab77cb35.chunk.js.map",
     "732.baf7beb0.chunk.js.map": "/invoice-app-react/static/js/732.baf7beb0.chunk.js.map",
     "453.ba3fda47.chunk.js.map": "/invoice-app-react/static/js/453.ba3fda47.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.00dca8da.css",
-    "static/js/main.215e0dbd.js"
+    "static/js/main.cc72220d.js"
   ]
 }
