@@ -1,70 +1,132 @@
-# Getting Started with Create React App
+# **Invoice Management App**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a **React-based invoice management system** with **user authentication, invoice creation, and PDF handling**. The application allows users to **upload invoices, fill in details, save progress, and generate a PDF preview**. Data persistence is managed using **localStorage**, and authentication is **mocked via localStorage**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## **🚀 Features**
 
-### `npm start`
+- **User Authentication** (Login using a mock user)
+- **Invoice Form with Data Persistence** (Auto-saves in `localStorage` while typing)
+- **Tab Navigation for Invoice Sections** (Vendor Details, Invoice Details, Comments)
+- **PDF Upload and Display** (Using `react-pdf`)
+- **Auto Populate Data** (Fills form with sample data and generates a PDF)
+- **Form Validation** (Using `Formik` and `Yup`)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## **📦 Tech Stack**
 
-### `npm test`
+- **Frontend:** React (with `react-router-dom`, `react-toastify`, `formik`, `yup`)
+- **PDF Handling:** `react-pdf`, `jspdf`
+- **State Management:** React Hooks (`useState`, `useEffect`)
+- **Styling:** Tailwind CSS
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## **🛠 Installation & Setup**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### **1️⃣ Clone the Repository**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```sh
+git clone https://github.com/your-username/invoice-management.git
+cd invoice-management
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### **2️⃣ Install Dependencies**
 
-### `npm run eject`
+```sh
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### **3️⃣ Start the Development Server**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```sh
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- The app will be available at **`http://localhost:3000`**.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## **🛠 Usage**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### **🔑 Login**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Open `http://localhost:3000`
+2. Enter any **username and password**.
+3. Click **Login** (this stores user data in `localStorage`).
+4. You will be redirected to the **Dashboard**.
 
-### Code Splitting
+### **📑 Create a New Invoice**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Upload a PDF invoice (optional).
+2. Fill in invoice details in the form.
+3. Data is **automatically saved** in `localStorage` while typing.
+4. Click **Submit** to validate and save.
 
-### Analyzing the Bundle Size
+### **✨ Auto Populate Data**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Click **"Auto Populate Data"** in the header.
+- The form gets pre-filled with sample data.
+- A PDF is generated dynamically with that data.
 
-### Making a Progressive Web App
+### **📂 Upload & View PDFs**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Click the **"Upload File"** button.
+- Select a PDF to view in the embedded preview.
 
-### Advanced Configuration
+### **🚪 Logout**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Click the **Logout** button to clear user data.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## **📂 Project Structure**
 
-### `npm run build` fails to minify
+```
+📦 invoice-management
+├── 📂 src
+│   ├── 📂 components
+│   │   ├── Header.js
+│   │   ├── InvoiceForm.js
+│   │   ├── PDFUploader.js
+│   │   ├── VendorDetails.js
+│   │   ├── InvoiceDetails.js
+│   │   ├── Comments.js
+│   │   ├── LogoutButton.js
+│   ├── 📂 pages
+│   │   ├── Login.js
+│   │   ├── Dashboard.js
+│   ├── App.js
+│   ├── index.js
+│   ├── styles.css
+│── .gitignore
+│── package.json
+│── README.md
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## **💡 Environment Variables**
+
+No `.env` file is required, as all authentication and data handling are done using **localStorage**.
+
+---
+
+## **🛠 Dependencies Used**
+
+```json
+"dependencies": {
+  "react": "^18.x",
+  "react-dom": "^18.x",
+  "react-router-dom": "^6.x",
+  "react-toastify": "^9.x",
+  "formik": "^2.x",
+  "yup": "^1.x",
+  "react-pdf": "^6.x",
+  "jspdf": "^2.x",
+  "@fortawesome/react-fontawesome": "^0.2.x",
+  "@fortawesome/free-solid-svg-icons": "^6.x"
+}
+```
