@@ -83,7 +83,7 @@ const Dashboard = () => {
         <div className="w-full">
           <PDFUploader pdfFile={pdfFile} setPdfFile={setPdfFile} />
         </div>
-        <div className="w-full">
+        <div className="w-full" style={{ height: "85vh" }}>
           <InvoiceForm
             formData={formData}
             setFormData={setFormData}

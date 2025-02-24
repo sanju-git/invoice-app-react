@@ -95,7 +95,11 @@ const InvoiceForm = ({ formData, setFormData, setActiveSection }) => {
   };
 
   return (
-    <div className="max-w-3xl mx-auto pt-0 p-6">
+    <div
+      className="max-w-3xl mx-auto pt-0 p-6 pdf-uploader-layout 
+               border border-gray-300 rounded-lg shadow-md p-4 bg-white"
+      style={{ overflowY: "auto" }}
+    >
       <VendorDetails
         formData={formData}
         handleChange={handleChange}
