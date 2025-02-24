@@ -6,11 +6,10 @@ import {
 } from "react-router-dom";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
+import ProtectedRoute from "./auth/ProtectedRoute";
 import { ToastContainer } from "react-toastify";
 
 const App = () => {
-  const isAuthenticated = !!localStorage.getItem("user");
-
   return (
     <>
       <Router>
@@ -18,14 +17,13 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route
             path="/dashboard"
-            element={isAuthenticated ? <Dashboard /> : <Navigate to="/login" />}
-          />
-          <Route
-            path="*"
             element={
-              <Navigate to={isAuthenticated ? "/dashboard" : "/login"} />
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
             }
           />
+          <Route path="*" element={<Navigate to="/login" replace />} />
         </Routes>
       </Router>
       <ToastContainer />
