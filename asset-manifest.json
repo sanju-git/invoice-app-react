@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/invoice-app-react/static/css/main.00dca8da.css",
-    "main.js": "/invoice-app-react/static/js/main.cc72220d.js",
+    "main.css": "/invoice-app-react/static/css/main.2428b3fd.css",
+    "main.js": "/invoice-app-react/static/js/main.d1677021.js",
     "static/js/239.ab77cb35.chunk.js": "/invoice-app-react/static/js/239.ab77cb35.chunk.js",
     "static/js/977.0de4337d.chunk.js": "/invoice-app-react/static/js/977.0de4337d.chunk.js",
     "static/js/732.baf7beb0.chunk.js": "/invoice-app-react/static/js/732.baf7beb0.chunk.js",
@@ -9,14 +9,14 @@
     "static/media/pdf.worker.min.js": "/invoice-app-react/static/media/pdf.worker.min.380330057e33539ae223.js",
     "static/media/WdgNLLU10l.gif": "/invoice-app-react/static/media/WdgNLLU10l.37f10cdf2a3f8ad77a66.gif",
     "index.html": "/invoice-app-react/index.html",
-    "main.00dca8da.css.map": "/invoice-app-react/static/css/main.00dca8da.css.map",
-    "main.cc72220d.js.map": "/invoice-app-react/static/js/main.cc72220d.js.map",
+    "main.2428b3fd.css.map": "/invoice-app-react/static/css/main.2428b3fd.css.map",
+    "main.d1677021.js.map": "/invoice-app-react/static/js/main.d1677021.js.map",
     "239.ab77cb35.chunk.js.map": "/invoice-app-react/static/js/239.ab77cb35.chunk.js.map",
     "732.baf7beb0.chunk.js.map": "/invoice-app-react/static/js/732.baf7beb0.chunk.js.map",
     "453.ba3fda47.chunk.js.map": "/invoice-app-react/static/js/453.ba3fda47.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.00dca8da.css",
-    "static/js/main.cc72220d.js"
+    "static/css/main.2428b3fd.css",
+    "static/js/main.d1677021.js"
   ]
 }
